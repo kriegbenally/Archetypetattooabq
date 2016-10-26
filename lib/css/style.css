@@ -30,6 +30,9 @@ body {padding: 0; font-family: lobster, arial, sans-serif}
   text-shadow: 0 1px 0 rgba(255,255,255,0.75)
 }
 
+/****************************************
+************BACKGROUND IMAGES************
+*****************************************/
 .octo {
   background: url("../../lib/images/octopus.jpg") no-repeat center center;
   background-size:cover;
@@ -50,6 +53,12 @@ body {padding: 0; font-family: lobster, arial, sans-serif}
   background: url('../../lib/images/artists/carlos/predator.png') no-repeat center center;
   background-size: cover;
 }
+
+.johnnyFive {
+  background: url('../images/artists/aldo/johnnyFive.png') no-repeat center center;
+  background-size: cover;
+}
+/*************END OF BACKGROUND IMAGES*************/
 
 .spacer {
   display: block; color: #333;
@@ -257,4 +266,182 @@ button.danger:hover {
   bottom: auto;
   top: 0;
   width: 100%;
+}
+
+
+/*****************************
+************ARTISTS************
+*****************************/
+.firstRow {
+  margin-top: 10px;
+}
+
+/*#firstBio {
+  background: white;
+}
+
+#secondBio {
+  background: #B22222;
+}
+
+#thirdBio {
+  background: #C0C0C0;
+}
+
+#fourthBio{
+  background: #DC143C;
+}
+
+#fifthBio {
+  background: #696969;
+}*/
+
+#firstBio, #secondBio, #thirdBio, #fourthBio, #fifthBio {
+  height: 300px;
+  padding: 65px;
+}
+
+@media (max-width: 600px) {
+  #firstBio, #secondBio, #thirdBio, #fourthBio, #fifthBio {
+    height: 365px;
+    padding: 0 0px 0 0px;
+  }
+}
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400";
+.badgescard, .firstinfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.content {
+  position: relative;
+  animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
+}
+
+.card {
+  width: 500px;
+  min-height: 100px;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: #708090;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 325px;
+    min-height: 75px;
+    padding: 10px;
+    border-radius: 2spx;
+    background-color: #708090;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+  }
+}
+
+.card:after {
+  content: '';
+  display: block;
+  width: 190px;
+  height: 300px;
+  background: #900a0f;
+  position: absolute;
+  animation: rotatemagic 0.75s cubic-bezier(0.425, 1.04, 0.47, 1.105) 1s both;
+}
+
+.badgescard {
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: #ECECEC;
+  width: 480px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: -1;
+  left: 10px;
+  bottom: 10px;
+  animation: animainfos 0.5s cubic-bezier(0.425, 1.04, 0.47, 1.105) 0.75s forwards;
+}
+.badgescard span {
+  font-size: 1.6em;
+  margin: 0px 6px;
+  opacity: 0.6;
+}
+
+.firstinfo {
+  flex-direction: row;
+  z-index: 2;
+  position: relative;
+}
+.firstinfo img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+@media (max-width: 600px) {
+  .firstinfo img {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+  }
+}
+.firstinfo .profileinfo {
+  padding: 0px 20px;
+}
+.firstinfo .profileinfo h1 {
+  font-size: 1.8em;
+  color: black;
+}
+.firstinfo .profileinfo h3 {
+  font-size: 1.2em;
+  color: white;
+  font-style: italic;
+}
+.firstinfo .profileinfo p.bio {
+  padding: 10px 0px;
+  color: white;
+  line-height: 2;
+  font-style: initial;
+}
+
+@keyframes animatop {
+  0% {
+    opacity: 0;
+    bottom: -600px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+@keyframes animainfos {
+  0% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: -42px;
+  }
+}
+@keyframes rotatemagic {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+    top: -24px;
+    left: -253px;
+  }
+  100% {
+    transform: rotate(-30deg);
+    top: -24px;
+    left: -78px;
+  }
 }

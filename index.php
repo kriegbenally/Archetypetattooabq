@@ -5,7 +5,7 @@
     <?php require_once("lib/headUtils.php");?>
   </head>
   <body>
-    <?php require_once("navBarTrans.php");?>
+    <?php require_once("lib/partials/navBarTrans.php");?>
     <div class="parallax octo hero" data-parallax-speed="1">
       <div class="hero-content">
         <h1>Archetype Tattoos</h1>
@@ -106,19 +106,7 @@
       </div>
     </div>
 
-    <!--Jquery CDN-->
-    <script src="http://code.jquery.com/jquery-2.2.4.js"
-    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-    crossorigin="anonymous">
-    </script>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-    crossorigin="anonymous">
-    </script>
-
-    <script src="lib/js/parallax.js"></script>
+    <?php require_once("lib/scripts.php"); ?>
 
   </body>
 </html>
